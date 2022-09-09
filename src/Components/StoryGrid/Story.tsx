@@ -99,7 +99,7 @@ const Story: React.FC<StoryProps> = () => {
       </GridItem>
       {GridData.slice(1, 3).map((item, i) => (
         <GridItem colStart={3} rowStart={i + 1} key={i}>
-          <AspectRatio ratio={1}>
+          <AspectRatio>
             <Link href={item.link} display='flex' flexDirection={'column'}>
               <Image src={item.image} objectFit='cover' rounded={'3x1'} />
               <Text
@@ -108,7 +108,7 @@ const Story: React.FC<StoryProps> = () => {
                 bg={'white'}
                 textColor='black'
                 zIndex={2}
-                mt={'-27px'}
+                mt={'-75px'}
                 padding='2px'
                 _hover={{
                   opacity: '0.9'
@@ -124,25 +124,8 @@ const Story: React.FC<StoryProps> = () => {
       {GridData.slice(4, 6).map((item, i) => (
         <GridItem colStart={4} rowStart={i + 1} key={i}>
           {' '}
-          <AspectRatio ratio={1}>
-            <Link href={item.link} display='flex' flexDirection={'column'}>
-              <Image src={item.image} objectFit='cover' rounded={'3x1'} />
-              <Text
-                w={'full'}
-                opacity={'0.6'}
-                bg={'white'}
-                textColor='black'
-                zIndex={2}
-                mt={'-27px'}
-                padding='2px'
-                _hover={{
-                  opacity: '0.9'
-                }}
-              >
-                {' '}
-                {item.title}
-              </Text>
-            </Link>
+          <AspectRatio>
+            <Image src={item.image} objectFit='cover' rounded={'3x1'} />
           </AspectRatio>
         </GridItem>
       ))}
